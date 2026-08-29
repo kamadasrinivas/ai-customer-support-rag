@@ -1,10 +1,34 @@
 .env
 .venv
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 *.sqlite3
 *.db
 eval_runs.db
 .DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+.coverage
+coverage/
+htmlcov/
+build/
+dist/
+*.egg-info/
+*.log
+*.tmp
+*.bak
+
+# Generated notebook outputs / local evaluation files
+mp1/*.jsonl
+mp1_results*.jsonl
+mp1_scored*.jsonl
+*_results*.jsonl
+*_scored*.jsonl
 
 # Ignore runtime data but keep folders
 data/uploads/*
