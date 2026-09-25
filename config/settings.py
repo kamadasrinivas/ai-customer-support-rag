@@ -20,5 +20,8 @@ class Settings(BaseSettings):
     DEFAULT_EMBEDDING_MODEL: str = "text-embedding-ada-002"
     CHUNK_SIZE: int = 500
     CHUNK_OVERLAP: int = 50
+    QDRANT_URL: str = ""
+    QDRANT_API_KEY: str = ""
+    QDRANT_COLLECTION: str = ""
 
 settings = Settings()
