@@ -1,0 +1,52 @@
+MP2 validation record
+Date: 2026-09-26
+Command: python mp2\mp2_rag.py validate
+Index: Existing mp2_sherlock collection, previously ingested from five stories (88 chunks).
+
+Validation output:
+
+  Validating 2 questions from predefined_questions.jsonl…
+
+  ✓ q1_red_headed_league_assistant
+	  Q: Who was the assistant working at Jabez Wilson's pawnshop, and what was his real identity?
+	  Cited: 01_red_headed_league.txt
+	  Expected: 01_red_headed_league.txt
+	  Facts matched: 1/5
+	  Latency: 5046ms
+
+  ✓ q2_speckled_band_murder_weapon
+	  Q: What killed Julia Stoner at Stoke Moran, and how was the method discovered?
+	  Cited: 02_speckled_band.txt
+	  Expected: 02_speckled_band.txt
+	  Facts matched: 3/6
+	  Latency: 2599ms
+
+  Source-match: 2/2
+
+  Validating 3 questions from learner_questions.jsonl…
+
+  ✓ q3_easy_blue_carbuncle
+	  Q: What gemstone did Peterson's wife find inside the goose?
+	  Cited: 03_blue_carbuncle.txt
+	  Expected: 03_blue_carbuncle.txt
+	  Facts matched: 1/1
+	  Latency: 2567ms
+
+  ✓ q4_medium_engineers_thumb
+	  Q: In what year did Watson attend Victor Hatherley at Paddington Station, and what was Hatherley's profession?
+	  Cited: 04_engineers_thumb.txt
+	  Expected: 04_engineers_thumb.txt
+	  Facts matched: 3/3
+	  Latency: 2834ms
+
+  ✓ q5_hard_scandal_in_bohemia
+	  Q: How did Irene Adler reveal where the photograph was hidden, and how did her marriage to Godfrey Norton help her keep it from the King the next morning?
+	  Cited: 05_scandal_in_bohemia.txt
+	  Expected: 05_scandal_in_bohemia.txt
+	  Facts matched: 2/4
+	  Latency: 3309ms
+
+  Source-match: 3/3
+
+Summary: source match 5/5; literal expected-fact matches 10/19; mean latency 3271ms.
+Interpretation: source citations matched for every question. The easy and medium questions matched all literal expected facts; the hard multi-hop question matched two of four. Fact counts are case-insensitive substring checks, not semantic grades, so paraphrases may not count. The run does not record answer text for manual adjudication.
